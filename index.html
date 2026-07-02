@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kitob Olami — Bilim va ilhom dunyosiga sayohat. Kitob o'qishni sevib, dunyoni o'zgartir!" />
+  <title>Kitob Olami | Bilim Dunyosiga Sayohat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=Cinzel:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <svg class="logo-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--primary); filter: drop-shadow(0 0 8px rgba(124, 58, 237, 0.5)); vertical-align: middle; margin-right: 8px;">
+        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+      </svg>
+      <span class="logo-text">Kitob <span class="accent">Olami</span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home" id="nav-home">Bosh sahifa</a></li>
+      <li><a href="#why-read" id="nav-why">Nima uchun?</a></li>
+      <li><a href="#genres" id="nav-genres">Janrlar</a></li>
+      <li><a href="#audio" id="nav-audio"><svg class="nav-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle; margin-right:4px; transform:translateY(-1px);"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>Audio</a></li>
+      <li><a href="#tips" id="nav-tips">Maslahatlar</a></li>
+      <li><a href="#quiz" id="nav-quiz">Viktorina</a></li>
+      <li><a href="#faq" id="nav-faq">Savol-Javob</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" style="display:inline-block; vertical-align:middle; margin-right:6px; color:#fbbf24; transform:translateY(-1px);"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Bilim olish sayohati
+      </div>
+      <h1 class="hero-title">
+        Kitob O'qish —<br/>
+        <span class="gradient-text">Dunyoni O'zgartir</span>
+      </h1>
+      <p class="hero-subtitle">
+        Har bir kitob — yangi hayot. Sahifalar orasida yo'qolib, 
+        g'oyalar olamini kashf et. Bilim eng kuchli qurol!
+      </p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num" data-target="10000">0</span><span>+</span>
+          <span class="stat-label">Kitob</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="50000">0</span><span>+</span>
+          <span class="stat-label">O'quvchi</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="120">0</span><span>+</span>
+          <span class="stat-label">Janr</span>
+        </div>
+      </div>
+      <div class="hero-btns">
+        <a href="#genres" class="btn btn-primary" id="hero-explore-btn">
+          <span>Kashf et</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle; margin-left:4px;"><path d="M4.5 16.5c-1.5 1.26-2.5 3.19-2.5 5.5h6c0-2.31-1-4.24-2.5-5.5z"></path><path d="M12 2C8 2 2 8 2 12c0 2.5 1.5 4.5 4 5l6-6 6 6c2.5-.5 4-2.5 4-5 0-4-6-10-10-10z"></path><path d="M9 15l-3-3"></path><path d="M15 15l3-3"></path><path d="M12 2v4"></path></svg>
+        </a>
+        <a href="#quiz" class="btn btn-secondary" id="hero-quiz-btn">
+          <span>Viktorina</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle; margin-left:4px;"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="floating-book" id="floating-book">
+        <img src="hero_book.png" alt="Sehrli kitob" class="hero-book-img" />
+        <div class="book-glow"></div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-indicator">
+        <span>Pastga</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY READ ===== -->
+  <section class="section why-read" id="why-read">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">
+          <svg class="tag-svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" style="display:inline-block; vertical-align:middle; margin-right:6px; transform:translateY(-1px);"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Afzalliklar
+        </span>
+        <h2 class="section-title">Nima uchun kitob o'qish kerak?</h2>
+        <p class="section-desc">Kitob o'qish faqat bilim bermasdan, hayotingizni tubdan o'zgartiradi</p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card" id="benefit-1">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="32" cy="28" rx="18" ry="16" fill="url(#b1g)" opacity="0.9"/>
+              <path d="M20 36c0 6 5 10 12 10s12-4 12-10" stroke="#c4b5fd" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="26" cy="24" r="3" fill="#ede9fe"/>
+              <circle cx="38" cy="24" r="3" fill="#ede9fe"/>
+              <line x1="26" y1="31" x2="38" y2="31" stroke="#c4b5fd" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M25 20 Q32 14 39 20" stroke="#a78bfa" stroke-width="1.5" fill="none"/>
+              <path d="M32 12 L32 8M26 13 L23 10M38 13 L41 10" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round"/>
+              <defs><radialGradient id="b1g" cx="50%" cy="40%" r="60%"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#4c1d95"/></radialGradient></defs>
+            </svg>
+          </div>
+          <h3>Aql kuchayadi</h3>
+          <p>Kitob o'qish miyani faol ushlab turadi. Har bir so'z, gap va g'oya miyangizni yangi yo'nalishlarda ishlatishga majbur qiladi.</p>
+          <div class="benefit-bar"><div class="benefit-fill" style="--fill: 95%"></div></div>
+          <span class="benefit-percent">95% samarali</span>
+        </div>
+        <div class="benefit-card" id="benefit-2">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="22" fill="url(#b2g)" opacity="0.85"/>
+              <path d="M22 28 Q32 18 42 28 Q42 40 32 46 Q22 40 22 28Z" fill="#bfdbfe" opacity="0.4"/>
+              <path d="M32 46 L32 52" stroke="#93c5fd" stroke-width="2" stroke-linecap="round"/>
+              <ellipse cx="32" cy="54" rx="6" ry="2.5" fill="#60a5fa" opacity="0.5"/>
+              <circle cx="32" cy="32" r="5" fill="#eff6ff" opacity="0.9"/>
+              <path d="M24 24 Q28 20 32 24M32 24 Q36 20 40 24" stroke="#93c5fd" stroke-width="1.5" fill="none"/>
+              <defs><radialGradient id="b2g" cx="50%" cy="40%" r="60%"><stop offset="0%" stop-color="#0ea5e9"/><stop offset="100%" stop-color="#1e40af"/></radialGradient></defs>
+            </svg>
+          </div>
+          <h3>Stress kamayyadi</h3>
+          <p>Faqat 6 daqiqa kitob o'qish stress darajasini 68%ga kamaytiradi. Kitob — eng yaxshi terapevt!</p>
+          <div class="benefit-bar"><div class="benefit-fill" style="--fill: 88%"></div></div>
+          <span class="benefit-percent">88% samara</span>
+        </div>
+        <div class="benefit-card" id="benefit-3">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="20" width="48" height="32" rx="16" fill="url(#b3g)" opacity="0.85"/>
+              <path d="M16 36 L28 28 L36 34 L48 24" stroke="#bbf7d0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="16" cy="36" r="3" fill="#6ee7b7"/>
+              <circle cx="28" cy="28" r="3" fill="#6ee7b7"/>
+              <circle cx="36" cy="34" r="3" fill="#6ee7b7"/>
+              <circle cx="48" cy="24" r="3" fill="#6ee7b7"/>
+              <path d="M32 12 Q38 16 32 20 Q26 16 32 12Z" fill="#34d399" opacity="0.8"/>
+              <defs><radialGradient id="b3g" cx="50%" cy="40%" r="60%"><stop offset="0%" stop-color="#10b981"/><stop offset="100%" stop-color="#064e3b"/></radialGradient></defs>
+            </svg>
+          </div>
+          <h3>Nutq boyiydi</h3>
+          <p>Ko'p o'qigan odam ko'p so'zni biladi. Boyitilgan lug'at sizni har qanday vaziyatda muloqot qila olishingizga yordam beradi.</p>
+          <div class="benefit-bar"><div class="benefit-fill" style="--fill: 92%"></div></div>
+          <span class="benefit-percent">92% samara</span>
+        </div>
+        <div class="benefit-card" id="benefit-4">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="20" stroke="url(#b4g)" stroke-width="4" fill="none"/>
+              <circle cx="32" cy="32" r="12" stroke="#fcd34d" stroke-width="3" fill="none" opacity="0.6"/>
+              <circle cx="32" cy="32" r="5" fill="#fbbf24"/>
+              <line x1="32" y1="8" x2="32" y2="14" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="32" y1="50" x2="32" y2="56" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="8" y1="32" x2="14" y2="32" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="50" y1="32" x2="56" y2="32" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round"/>
+              <defs><linearGradient id="b4g" x1="0" y1="0" x2="64" y2="64"><stop stop-color="#f59e0b"/><stop offset="1" stop-color="#d97706"/></linearGradient></defs>
+            </svg>
+          </div>
+          <h3>Diqqat o'sadi</h3>
+          <p>Kitob o'qish paytida faqat bir narsaga e'tibor qaratish diqqatni rivojlantiradi va konsentratsiyani yaxshilaydi.</p>
+          <div class="benefit-bar"><div class="benefit-fill" style="--fill: 85%"></div></div>
+          <span class="benefit-percent">85% samara</span>
+        </div>
+        <div class="benefit-card" id="benefit-5">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="22" fill="url(#b5g)" opacity="0.7"/>
+              <path d="M14 32 Q22 14 32 12 Q42 14 50 32 Q42 50 32 52 Q22 50 14 32Z" stroke="#7dd3fc" stroke-width="1.5" fill="none"/>
+              <path d="M32 10 L32 54M10 32 L54 32" stroke="#7dd3fc" stroke-width="1" opacity="0.5"/>
+              <path d="M16 18 Q24 20 32 12 Q40 20 48 18" stroke="#7dd3fc" stroke-width="1" fill="none" opacity="0.5"/>
+              <path d="M16 46 Q24 44 32 52 Q40 44 48 46" stroke="#7dd3fc" stroke-width="1" fill="none" opacity="0.5"/>
+              <path d="M38 18 L46 12 L44 20Z" fill="#f59e0b"/>
+              <defs><radialGradient id="b5g"><stop offset="0%" stop-color="#0284c7"/><stop offset="100%" stop-color="#0c4a6e"/></radialGradient></defs>
+            </svg>
+          </div>
+          <h3>Sayohat qilasiz</h3>
+          <p>Kitob orqali dunyoning har bir burchagiga sayohat qilishingiz mumkin. Xayol olamida chegara yo'q!</p>
+          <div class="benefit-bar"><div class="benefit-fill" style="--fill: 100%"></div></div>
+          <span class="benefit-percent">100% bepul</span>
+        </div>
+        <div class="benefit-card" id="benefit-6">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="32" cy="38" rx="10" ry="12" fill="url(#b6g)" opacity="0.9"/>
+              <path d="M32 26 Q20 22 20 14 Q20 6 32 8 Q44 6 44 14 Q44 22 32 26Z" fill="url(#b6g2)" opacity="0.85"/>
+              <line x1="28" y1="50" x2="36" y2="50" stroke="#fde68a" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="30" y1="54" x2="34" y2="54" stroke="#fde68a" stroke-width="2" stroke-linecap="round"/>
+              <line x1="32" y1="26" x2="32" y2="30" stroke="#fde68a" stroke-width="2"/>
+              <path d="M26 14 L32 6 L38 14" stroke="#fbbf24" stroke-width="1.5" fill="none"/>
+              <defs>
+                <radialGradient id="b6g"><stop offset="0%" stop-color="#fbbf24"/><stop offset="100%" stop-color="#92400e"/></radialGradient>
+                <linearGradient id="b6g2" x1="32" y1="6" x2="32" y2="26" gradientUnits="userSpaceOnUse"><stop stop-color="#fef3c7"/><stop offset="1" stop-color="#fbbf24"/></linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <h3>Ijod rivojlanadi</h3>
+          <p>Kitob o'qish ijodiy fikrlashni kuchaytiradi. Yangi g'oyalar va noyob yechimlar paydo bo'ladi.</p>
+          <div class="benefit-bar"><div class="benefit-fill" style="--fill: 90%"></div></div>
+          <span class="benefit-percent">90% samara</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GENRES ===== -->
+  <section class="section genres" id="genres">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">
+          <svg class="tag-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" style="display:inline-block; vertical-align:middle; margin-right:6px; transform:translateY(-1px);"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>Janrlar
+        </span>
+        <h2 class="section-title">Qaysi janr siz uchun?</h2>
+        <p class="section-desc">O'zingizga mos kitob janrini toping va sayohatingizni boshlang</p>
+      </div>
+      <div class="genres-grid">
+        <div class="genre-card" id="genre-fantasy" style="--clr: #7c3aed">
+          <div class="genre-img-wrap"><img src="genre_fantasy.png" alt="Fantastika" class="genre-img"/></div>
+          <h3>Fantastika</h3>
+          <p>Sehrli olamlar, ajdaholar va qahramonlik sarguzashtlari</p>
+          <div class="genre-books">
+            <span>Harry Potter</span>
+            <span>Hobbit</span>
+            <span>Narnia</span>
+          </div>
+          <div class="genre-hover-line"></div>
+        </div>
+        <div class="genre-card" id="genre-science" style="--clr: #0ea5e9">
+          <div class="genre-img-wrap"><img src="genre_science.png" alt="Ilm-fan" class="genre-img"/></div>
+          <h3>Ilm-fan</h3>
+          <p>Koinot sirlari, fizika qonunlari va kashfiyotlar dunyosi</p>
+          <div class="genre-books">
+            <span>Brief History</span>
+            <span>Cosmos</span>
+            <span>Sapiens</span>
+          </div>
+          <div class="genre-hover-line"></div>
+        </div>
+        <div class="genre-card" id="genre-philosophy" style="--clr: #f59e0b">
+          <div class="genre-img-wrap"><img src="genre_philosophy.png" alt="Falsafa" class="genre-img"/></div>
+          <h3>Falsafa</h3>
+          <p>Hayot ma'nosi, axloq va insoning o'rni haqida chuqur fikrlar</p>
+          <div class="genre-books">
+            <span>Alchemist</span>
+            <span>Siddharta</span>
+            <span>Meditations</span>
+          </div>
+          <div class="genre-hover-line"></div>
+        </div>
+        <div class="genre-card" id="genre-history" style="--clr: #ef4444">
+          <div class="genre-img-wrap">
+            <svg viewBox="0 0 120 120" class="genre-img" xmlns="http://www.w3.org/2000/svg">
+              <rect width="120" height="120" fill="#1a0a0a"/>
+              <rect x="20" y="70" width="12" height="40" fill="#dc2626" rx="2"/>
+              <rect x="40" y="55" width="12" height="55" fill="#b91c1c" rx="2"/>
+              <rect x="60" y="40" width="12" height="70" fill="#dc2626" rx="2"/>
+              <rect x="80" y="60" width="12" height="50" fill="#ef4444" rx="2"/>
+              <rect x="10" y="108" width="100" height="4" fill="#7f1d1d" rx="2"/>
+              <path d="M55 30 L60 10 L65 30 L80 30 L68 40 L73 58 L60 46 L47 58 L52 40 L40 30Z" fill="#fbbf24"/>
+              <circle cx="60" cy="32" r="6" fill="#fef3c7" opacity="0.9"/>
+            </svg>
+          </div>
+          <h3>Tarix</h3>
+          <p>O'tmishdan saboq oling va sivilizatsiyalar sirlari bilan tanishing</p>
+          <div class="genre-books">
+            <span>Guns & Steel</span>
+            <span>1984</span>
+            <span>Rome</span>
+          </div>
+          <div class="genre-hover-line"></div>
+        </div>
+        <div class="genre-card" id="genre-selfdev" style="--clr: #10b981">
+          <div class="genre-img-wrap">
+            <svg viewBox="0 0 120 120" class="genre-img" xmlns="http://www.w3.org/2000/svg">
+              <rect width="120" height="120" fill="#021a0e"/>
+              <rect x="25" y="75" width="70" height="35" rx="4" fill="#064e3b"/>
+              <rect x="30" y="80" width="60" height="25" rx="2" fill="#065f46" opacity="0.8"/>
+              <path d="M55 75 L60 20 L65 75Z" fill="#10b981"/>
+              <path d="M50 35 L60 10 L70 35 L65 35 L65 75 L55 75 L55 35Z" fill="#34d399"/>
+              <ellipse cx="60" cy="35" rx="18" ry="6" fill="#6ee7b7" opacity="0.4"/>
+              <circle cx="60" cy="10" r="5" fill="#fbbf24"/>
+              <path d="M55 10 L65 10" stroke="#fbbf24" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>O'z-o'zini rivojlantirish</h3>
+          <p>Muvaffaqiyat siri, odatlar va inson psixologiyasi</p>
+          <div class="genre-books">
+            <span>Atomic Habits</span>
+            <span>Think & Grow</span>
+            <span>Power of Now</span>
+          </div>
+          <div class="genre-hover-line"></div>
+        </div>
+        <div class="genre-card" id="genre-novel" style="--clr: #ec4899">
+          <div class="genre-img-wrap">
+            <svg viewBox="0 0 120 120" class="genre-img" xmlns="http://www.w3.org/2000/svg">
+              <rect width="120" height="120" fill="#1a0010"/>
+              <rect x="30" y="35" width="60" height="75" rx="4" fill="#831843"/>
+              <rect x="35" y="40" width="50" height="65" rx="2" fill="#9d174d"/>
+              <line x1="42" y1="55" x2="78" y2="55" stroke="#fbcfe8" stroke-width="1.5" opacity="0.7"/>
+              <line x1="42" y1="63" x2="78" y2="63" stroke="#fbcfe8" stroke-width="1.5" opacity="0.5"/>
+              <line x1="42" y1="71" x2="70" y2="71" stroke="#fbcfe8" stroke-width="1.5" opacity="0.5"/>
+              <path d="M60 18 C55 10 44 10 44 20 C44 28 52 33 60 40 C68 33 76 28 76 20 C76 10 65 10 60 18Z" fill="#f472b6"/>
+              <path d="M60 18 C60 18 58 22 60 40 C62 22 60 18 60 18Z" fill="#be185d" opacity="0.6"/>
+            </svg>
+          </div>
+          <h3>Roman</h3>
+          <p>Muhabbat, hayot va insoniy hissiyotlarning go'zal tasviri</p>
+          <div class="genre-books">
+            <span>Pride & Prejudice</span>
+            <span>Anna Karenina</span>
+            <span>1001 Nights</span>
+          </div>
+          <div class="genre-hover-line"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AUDIO EXCERPTS ===== -->
+  <section class="section audio-section" id="audio">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">
+          <svg class="tag-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" style="display:inline-block; vertical-align:middle; margin-right:6px; transform:translateY(-1px);"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>Audio Parcha
+        </span>
+        <h2 class="section-title">Mashhur kitoblar ovozda</h2>
+        <p class="section-desc">Dunyoning eng mashhur kitoblaridan ajoyib parchalarni tinglang</p>
+      </div>
+
+      <!-- Book selector tabs -->
+      <div class="audio-tabs" id="audio-tabs">
+        <button class="audio-tab active" data-book="0" id="audio-tab-0">
+          <img src="genre_philosophy.png" class="tab-img" alt="Alkimyogar"/>
+          <span>Alkimyogar</span>
+        </button>
+        <button class="audio-tab" data-book="1" id="audio-tab-1">
+          <img src="genre_science.png" class="tab-img" alt="Sapiens"/>
+          <span>Sapiens</span>
+        </button>
+        <button class="audio-tab" data-book="2" id="audio-tab-2">
+          <img src="genre_fantasy.png" class="tab-img" alt="Kichkina Shahzoda"/>
+          <span>Kichkina Shahzoda</span>
+        </button>
+        <button class="audio-tab" data-book="3" id="audio-tab-3">
+          <img src="hero_book.png" class="tab-img" alt="O'tkan Kunlar"/>
+          <span>O'tkan Kunlar</span>
+        </button>
+      </div>
+
+      <!-- Player card -->
+      <div class="audio-player-card" id="audio-player-card">
+        <!-- Waveform visual -->
+        <div class="waveform-container">
+          <div class="waveform" id="waveform">
+            <div class="waveform-bars" id="waveform-bars"></div>
+          </div>
+          <div class="audio-now-playing" id="audio-now-playing">
+            <div class="now-playing-dot"></div>
+            <span id="now-playing-text">Tayyor</span>
+          </div>
+        </div>
+
+        <!-- Book info -->
+        <div class="audio-book-info" id="audio-book-info">
+          <div class="audio-cover" id="audio-cover"><img src="genre_philosophy.png" alt="kitob" class="audio-cover-img" id="audio-cover-img"/></div>
+          <div class="audio-meta">
+            <h3 class="audio-book-title" id="audio-book-title">Alkimyogar</h3>
+            <span class="audio-book-author" id="audio-book-author">Paulo Koelo · 1988</span>
+            <div class="audio-tags">
+              <span class="audio-tag">Falsafa</span>
+              <span class="audio-tag">Bestseller</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Excerpt text -->
+        <div class="excerpt-container">
+          <div class="excerpt-label">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" style="display:inline-block; vertical-align:middle; margin-right:6px; transform:translateY(-1px);"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>Parcha:
+          </div>
+          <div class="excerpt-text" id="excerpt-text">
+            <!-- filled by JS -->
+          </div>
+        </div>
+
+        <!-- Progress bar -->
+        <div class="audio-progress-wrap">
+          <span class="audio-time" id="audio-elapsed">0:00</span>
+          <div class="audio-progress-bar" id="audio-progress-bar">
+            <div class="audio-progress-fill" id="audio-progress-fill"></div>
+            <div class="audio-progress-thumb" id="audio-progress-thumb"></div>
+          </div>
+          <span class="audio-time" id="audio-total">0:00</span>
+        </div>
+
+        <!-- Controls -->
+        <div class="audio-controls">
+          <button class="audio-ctrl-btn" id="audio-prev" title="Oldingi kitob">⏮</button>
+          <button class="audio-ctrl-btn speed-btn" id="audio-speed" title="Tezlik">1×</button>
+          <button class="audio-play-btn" id="audio-play-btn" title="Ijro et">
+            <span class="play-icon">▶</span>
+          </button>
+          <button class="audio-ctrl-btn" id="audio-stop" title="To'xtat">⏹</button>
+          <button class="audio-ctrl-btn" id="audio-next" title="Keyingi kitob">⏭</button>
+        </div>
+
+        <!-- Voice selector -->
+        <div class="voice-selector-wrap">
+          <label class="voice-label">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" style="display:inline-block; vertical-align:middle; margin-right:4px; transform:translateY(-1px);"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Ovoz:
+          </label>
+          <select class="voice-select" id="voice-select">
+            <option value="">Yuklanmoqda...</option>
+          </select>
+          <label class="voice-label" style="margin-left:16px">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" style="display:inline-block; vertical-align:middle; margin-right:4px; transform:translateY(-1px);"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>Balandlik:
+          </label>
+          <input type="range" class="vol-range" id="vol-range" min="0" max="1" step="0.05" value="1" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TIPS ===== -->
+  <section class="section tips" id="tips">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">
+          <svg class="tag-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" style="display:inline-block; vertical-align:middle; margin-right:6px; transform:translateY(-1px);"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A5 5 0 0 0 8 8c0 1 .3 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg>Maslahatlar
+        </span>
+        <h2 class="section-title">Ko'proq o'qish uchun sirlar</h2>
+        <p class="section-desc">Professional o'quvchilarning eng yaxshi usullari</p>
+      </div>
+      <div class="tips-container">
+        <div class="tips-image">
+          <img src="books_collection.png" alt="Kitoblar kolleksiyasi" class="tips-img" />
+          <div class="tips-quote">
+            <blockquote>"Kitob o'qigan odam ming yil umr ko'radi"</blockquote>
+            <cite>— Sharq donishmandligi</cite>
+          </div>
+        </div>
+        <div class="tips-list">
+          <div class="tip-item" id="tip-1">
+            <div class="tip-number">01</div>
+            <div class="tip-content">
+              <h3>Kunlik vaqt ajrating</h3>
+              <p>Har kuni kamida 20-30 daqiqa kitob o'qing. Ertalab yoki kechqurun — muhimi muntazamlik.</p>
+            </div>
+          </div>
+          <div class="tip-item" id="tip-2">
+            <div class="tip-number">02</div>
+            <div class="tip-content">
+              <h3>Qulay joy toping</h3>
+              <p>Ovoz shovqinsiz, yoqimli va qulay joy o'qishni yanada zavqli qiladi.</p>
+            </div>
+          </div>
+          <div class="tip-item" id="tip-3">
+            <div class="tip-number">03</div>
+            <div class="tip-content">
+              <h3>Konspekt yozing</h3>
+              <p>Muhim fikrlarni yozib boring. Bu bilimni mustahkamlaydi va eslab qolishga yordam beradi.</p>
+            </div>
+          </div>
+          <div class="tip-item" id="tip-4">
+            <div class="tip-number">04</div>
+            <div class="tip-content">
+              <h3>Telefonsiz o'qing</h3>
+              <p>O'qiyotganda telefon va boshqa chalg'ituvchilarni chetga qo'ying. Diqqatingiz to'liq kitobda bo'lsin.</p>
+            </div>
+          </div>
+          <div class="tip-item" id="tip-5">
+            <div class="tip-number">05</div>
+            <div class="tip-content">
+              <h3>Do'stlaringiz bilan muhokama qiling</h3>
+              <p>O'qigan kitobingizni muhokama qilish tushunishni chuqurlashtiradi va yangi nuqtai nazarlar ochadi.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QUIZ ===== -->
+  <section class="section quiz-section" id="quiz">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">
+          <svg class="tag-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" style="display:inline-block; vertical-align:middle; margin-right:6px; transform:translateY(-1px);"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>Viktorina
+        </span>
+        <h2 class="section-title">Bilimingizni sinab ko'ring!</h2>
+        <p class="section-desc">Kitoblar haqidagi qiziqarli savollar bilan bilimingizni tekshiring</p>
+      </div>
+      <div class="quiz-card" id="quiz-card">
+        <div class="quiz-progress-bar">
+          <div class="quiz-progress-fill" id="quiz-progress"></div>
+        </div>
+        <div class="quiz-meta">
+          <span class="quiz-counter" id="quiz-counter">Savol 1 / 8</span>
+          <span class="quiz-score" id="quiz-score">Ball: 0</span>
+        </div>
+        <div class="quiz-question-area" id="quiz-question-area">
+          <div class="quiz-emoji" id="quiz-emoji">
+            <svg style="width: 48px; height: 48px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; color: var(--primary); filter: drop-shadow(0 4px 12px rgba(124, 58, 237, 0.3)); display: block; margin: 0 auto;" viewBox="0 0 24 24">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              <path d="M6 6h10M6 10h10"></path>
+            </svg>
+          </div>
+          <h3 class="quiz-question" id="quiz-question">Yuklanmoqda...</h3>
+        </div>
+        <div class="quiz-options" id="quiz-options"></div>
+        <div class="quiz-feedback" id="quiz-feedback"></div>
+        <button class="btn btn-primary quiz-next-btn" id="quiz-next" style="display:none">
+          Keyingisi →
+        </button>
+        <div class="quiz-result" id="quiz-result" style="display:none"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">
+          <svg class="tag-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" style="display:inline-block; vertical-align:middle; margin-right:6px; transform:translateY(-1px);"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>Savol-Javob
+        </span>
+        <h2 class="section-title">Ko'p so'raladigan savollar</h2>
+        <p class="section-desc">Kitob o'qish haqidagi eng keng tarqalgan savollarga javoblar</p>
+      </div>
+      <div class="faq-list" id="faq-list">
+
+        <div class="faq-item" id="faq-1">
+          <button class="faq-question" aria-expanded="false">
+            <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle; margin-right:8px; color:var(--primary); transform:translateY(-1px);"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>Har kuni necha bet kitob o'qish tavsiya etiladi?</span>
+            <div class="faq-icon">+</div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Boshlang'ich daraja uchun kuniga <strong>10-20 bet</strong> yetarli. Bu taxminan 20-30 daqiqa vaqt oladi. 
+              Asta-sekin ko'paytiring. Muhimi — sifat, miqdor emas. Bir kuni 50 bet o'qib, 3 kun o'qimasangiz, 
+              bu oddiy emas. <strong>Muntazamlik — muvaffaqiyat kaliti!</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-2">
+          <button class="faq-question" aria-expanded="false">
+            <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle; margin-right:8px; color:var(--primary); transform:translateY(-1px);"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>Elektron kitob yoki qog'oz kitob — qaysi biri yaxshiroq?</span>
+            <div class="faq-icon">+</div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Ikkalasining ham afzalliklari bor. <strong>Qog'oz kitob</strong> ko'zni kamroq charchatadi, 
+              sahifani ushlab turish hissi beradi va uyqu oldidan o'qish uchun juda mos. 
+              <strong>Elektron kitob</strong> esa qo'lay, minglab kitobni bir joyda saqlash mumkin va 
+              har joyda o'qish imkoniyati bor. O'zingizga qulay turini tanlang!
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-3">
+          <button class="faq-question" aria-expanded="false">
+            <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle; margin-right:8px; color:var(--primary); transform:translateY(-1px);"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>O'qiyotganda tushunmagan so'zlarni nima qilish kerak?</span>
+            <div class="faq-icon">+</div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Tushunmagan so'zni <strong>darhol lug'atdan qidiring</strong> va alohida daftarga yozib boring. 
+              Haftada bir marta bu so'zlarni qayta ko'rib chiqing. Bu usul lug'atingizni tez va mustahkam 
+              boyitishning eng samarali yo'li. Ko'p o'quvchilar buni <strong>"So'z bank"</strong> deb atashadi.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-4">
+          <button class="faq-question" aria-expanded="false">
+            <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle; margin-right:8px; color:var(--primary); transform:translateY(-1px);"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>Qaysi yoshdan kitob o'qishni boshlash kerak?</span>
+            <div class="faq-icon">+</div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Kitob o'qish uchun <strong>hech qachon kech emas</strong> va hech qachon erta emas! 
+              Bolalar uchun 3 yoshdan rasm kitoblar boshlanadi. O'smirlar uchun sarguzasht va fantastika janrlari juda mos. 
+              Kattalar uchun esa barcha janrlar ochiq. 70-80 yoshda ham kitob o'qib, 
+              yangi narsalar o'rgangan odamlar ko'p!
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-5">
+          <button class="faq-question" aria-expanded="false">
+            <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle; margin-right:8px; color:var(--primary); transform:translateY(-1px);"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>O'qigan kitobni tezroq unutmaslik uchun nima qilish kerak?</span>
+            <div class="faq-icon">+</div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <strong>3 ta usul:</strong><br/>
+              1. <strong>Konspekt yozing</strong> — muhim fikr va sitatalarni qayd eting.<br/>
+              2. <strong>Muhokama qiling</strong> — do'stingizga yoki oila a'zolaringizga o'qigan narsalaringizni gapiring.<br/>
+              3. <strong>Amalda qo'llang</strong> — o'qigan bilimingizni hayotingizda sinab ko'ring. 
+              Amalda ishlatilgan bilim hech qachon unutilmaydi!
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-6">
+          <button class="faq-question" aria-expanded="false">
+            <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle; margin-right:8px; color:var(--primary); transform:translateY(-1px);"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>Kitob o'qish uchun qanday muhit yaratish kerak?</span>
+            <div class="faq-icon">+</div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Ideal o'qish muhiti uchun: <strong>yetarli yoritish</strong> (ko'zni charchatmaydigan), 
+              <strong>qulay o'rindiq</strong>, <strong>idillik choy yoki kofe</strong>, 
+              <strong>past hajmdagi instrumental musiqa</strong> (ixtiyoriy) va eng muhimi — 
+              <strong>telefon boshqa xonada!</strong> Ba'zilar tabiat tovushlarini (yomg'ir, o'rmon) 
+              fonga qo'yishni yoqtiradi — bu ham juda yaxshi!
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-7">
+          <button class="faq-question" aria-expanded="false">
+            <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle; margin-right:8px; color:var(--primary); transform:translateY(-1px);"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>Yoqmaydigan kitobni o'qib tugatish shartmi?</span>
+            <div class="faq-icon">+</div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yo'q! <strong>Siz biron kitobni sevmaydigan bo'lsangiz, o'qishni to'xtatish mumkin.</strong> 
+              Bu vaqtingizni tejaydi va yangi, qiziqarliroq kitob topishga imkon beradi. 
+              Mashhur muallif Nick Hornby aytganidek: <em>"Kitob o'qish siz uchun quvonch bo'lishi kerak, 
+              majburiyat emas."</em> O'qiyotganda quvonch hissi bo'lmasa — boshqa kitob oling!
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-8">
+          <button class="faq-question" aria-expanded="false">
+            <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle; margin-right:8px; color:var(--primary); transform:translateY(-1px);"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>O'zbek tilidagi eng yaxshi kitoblar qaysilar?</span>
+            <div class="faq-icon">+</div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <strong>Klassiklar:</strong> Abdulla Qodiriy "O'tkan kunlar", Cho'lpon "Kecha va kunduz", 
+              Oybek "Navoiy"<br/>
+              <strong>Zamonaviy:</strong> Xurshid Davron, Ulmas Umarbekov asarlari<br/>
+              <strong>Tarjima kitoblar (O'zbek tilida):</strong> Alisher Navoiy "Xamsa", 
+              "Ming bir kecha", Paulo Koelo "Alkimyogar"<br/>
+              <strong>Bilim beruvchi:</strong> "Kichik knyaz", "Sevgili Robinzon", "Don Kixot"
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QUOTE BANNER ===== -->
+  <section class="quote-banner">
+    <div class="quote-slider" id="quote-slider">
+      <div class="quote-slide active">
+        <blockquote>"Ko'p o'qigan odam — ko'p yashagan odam"</blockquote>
+        <cite>— Aristotel</cite>
+      </div>
+      <div class="quote-slide">
+        <blockquote>"Kitob — eng yaxshi do'st. U hech qachon aldamaydi"</blockquote>
+        <cite>— Sharq hikmat</cite>
+      </div>
+      <div class="quote-slide">
+        <blockquote>"Bir kitob o'qigan odam bir kishini ko'rgan — mingta kitob o'qigan ming kishini"</blockquote>
+        <cite>— Xalq maqoli</cite>
+      </div>
+      <div class="quote-slide">
+        <blockquote>"O'qimagan odam ko'r, o'qigan odam ko'ruvchi"</blockquote>
+        <cite>— Alisher Navoiy</cite>
+      </div>
+    </div>
+    <div class="quote-dots" id="quote-dots">
+      <button class="dot active" id="dot-0"></button>
+      <button class="dot" id="dot-1"></button>
+      <button class="dot" id="dot-2"></button>
+      <button class="dot" id="dot-3"></button>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <svg class="logo-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--primary); filter: drop-shadow(0 0 8px rgba(124, 58, 237, 0.5)); vertical-align: middle; margin-right: 8px;">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+          </svg>
+          <span class="logo-text">Kitob <span class="accent">Olami</span></span>
+          <p>Bilim va ilhom dunyosiga eshik</p>
+        </div>
+        <div class="footer-links">
+          <h4>Bo'limlar</h4>
+          <ul>
+            <li><a href="#why-read">Nima uchun o'qish?</a></li>
+            <li><a href="#genres">Janrlar</a></li>
+            <li><a href="#tips">Maslahatlar</a></li>
+            <li><a href="#quiz">Viktorina</a></li>
+          </ul>
+        </div>
+        <div class="footer-quote">
+          <h4>Bugungi iqtibos</h4>
+          <blockquote>"Kitob o'qimagan odam o'zi bilmagan holda katta yo'qotishlarga yo'l qo'yadi"</blockquote>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Kitob Olami. Barcha huquqlar himoyalangan. • Bilim bilan yashaymiz!</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="scroll-top-btn" id="scroll-top" title="Yuqoriga">⬆</div>
+
+  <script src="app.js"></script>
+</body>
+</html>
